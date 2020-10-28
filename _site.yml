@@ -1,0 +1,16 @@
+name: "Tessa Senders"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "Education"
+      href: education.html
+    - text: "Experience"
+      href: experience.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<tessas@umich.edu>
+    - icon: fa-github fa-lg
+      href: http://github.com/NICE8x/
+output:
+  html_document:
+    theme: cosmo
