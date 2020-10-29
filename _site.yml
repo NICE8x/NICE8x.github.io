@@ -3,8 +3,6 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "Education"
-      href: education.html
     - text: "Experience"
       href: experience.html
     - icon: fa-envelope fa-lg
