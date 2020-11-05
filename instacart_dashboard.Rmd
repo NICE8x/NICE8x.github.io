@@ -8,15 +8,32 @@ output:
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+
+data("instacart")
+set.seed(1000)
+instacart_df <- sample_n(instacart, 1000)
 ```
 
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### Distribution of the Hour of the Day Order is Placed by Department
 
-```{r}
+```{r chart A}
+x <- list(
+  title = "<br><br><br>Department"
+)
+y <- list(
+  title = "Order Hour of the Day"
+)
 
+instacart_df %>%
+  mutate(department = fct_reorder(department, order_hour_of_day)) %>% 
+  plot_ly(y = ~order_hour_of_day, color = ~department, type = "box", colors = "viridis") %>%
+  layout(xaxis = x, yaxis = y)
 ```
 
 Column {data-width=350}
@@ -24,12 +41,12 @@ Column {data-width=350}
 
 ### Chart B
 
-```{r}
+```{r Chart B}
 
 ```
 
 ### Chart C
 
-```{r}
+```{r Chart C}
 
 ```

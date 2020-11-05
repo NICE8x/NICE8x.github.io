@@ -5,6 +5,8 @@ navbar:
   right:
     - text: "Experience"
       href: experience.html
+    - text: "Instacart Dashboard"
+      href: instacart_dashboard.html
     - icon: fa-envelope fa-lg
       href: mailto:<tessas@umich.edu>
     - icon: fa-linkedin fa-lg
