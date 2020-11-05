@@ -2,8 +2,7 @@
 title: "Instacart Dashboard"
 output: 
   flexdashboard::flex_dashboard:
-    orientation: columns
-    vertical_layout: fill
+    vertical_layout: scroll
 ---
 
 ```{r setup, include=FALSE}
@@ -17,7 +16,7 @@ set.seed(1000)
 instacart_df <- sample_n(instacart, 1000)
 ```
 
-Column {data-width=650}
+Column {data-width=550}
 -----------------------------------------------------------------------
 
 ### Distribution of the Hour of the Day Order is Placed by Department
@@ -36,13 +35,24 @@ instacart_df %>%
   layout(xaxis = x, yaxis = y)
 ```
 
-Column {data-width=350}
+Column {data-width=550}
 -----------------------------------------------------------------------
 
-### Chart B
+### Number of Items Ordered in Each Department
 
 ```{r Chart B}
+x <- list(
+  title = "<br><br><br><br>Department"
+)
+y <- list(
+  title = "Count"
+)
 
+instacart_df %>% 
+  count(department) %>% 
+  mutate(department = fct_reorder(department, n)) %>% 
+  plot_ly(x = ~department, y = ~n, color = ~department, type = "bar", colors = "viridis") %>%
+  layout(xaxis = x, yaxis = y)
 ```
 
 ### Chart C
