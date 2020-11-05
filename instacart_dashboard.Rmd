@@ -19,19 +19,19 @@ instacart_df <- sample_n(instacart, 1000)
 Column {data-width=550}
 -----------------------------------------------------------------------
 
-### Distribution of the Hour of the Day Order is Placed by Department
+### Distribution of the Days Since Prior Order by Department
 
-```{r chart A}
+```{r Chart A}
 x <- list(
   title = "<br><br><br>Department"
 )
 y <- list(
-  title = "Order Hour of the Day"
+  title = "Days Since Prior Order"
 )
 
 instacart_df %>%
-  mutate(department = fct_reorder(department, order_hour_of_day)) %>% 
-  plot_ly(y = ~order_hour_of_day, color = ~department, type = "box", colors = "viridis") %>%
+  mutate(department = fct_reorder(department, days_since_prior_order)) %>% 
+  plot_ly(y = ~days_since_prior_order, color = ~department, type = "box", colors = "viridis") %>%
   layout(xaxis = x, yaxis = y)
 ```
 
@@ -55,8 +55,20 @@ instacart_df %>%
   layout(xaxis = x, yaxis = y)
 ```
 
-### Chart C
+### Number of Items Added to Cart versus the Order Hour of the Day
 
 ```{r Chart C}
+x <- list(
+  title = "<br><br><br># of Items Added to Cart"
+)
+y <- list(
+  title = "Order Hour of Day"
+)
 
+instacart_df %>%
+  mutate(text_label = str_c("Department: ", department)) %>% 
+  plot_ly(
+    x = ~add_to_cart_order, y = ~order_hour_of_day, type = "scatter", mode = "markers",
+    color = ~department, text = ~text_label, alpha = 0.5, colors = "viridis") %>%
+  layout(xaxis = x, yaxis = y)
 ```
