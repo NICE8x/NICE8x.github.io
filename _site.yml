@@ -7,6 +7,8 @@ navbar:
       href: experience.html
     - icon: fa-envelope fa-lg
       href: mailto:<tessas@umich.edu>
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/tessasenders/
     - icon: fa-github fa-lg
       href: http://github.com/NICE8x/
 output:

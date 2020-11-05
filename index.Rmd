@@ -7,9 +7,12 @@ output:
     theme: cosmo
 ---
 
-Graduate student at Columbia University Mailman School of Public Health pursuing a Master of Science in Biostatistics (Theory and Methods track) 
+<br>
+<b>Graduate student at Columbia University Mailman School of Public Health pursuing a Master of Science in Biostatistics (Theory and Methods track)</b> 
 
 <img src="images/tessa_senders_profile.jpg" style="width:20%">
+
+<br>
 
 ## Research
 
@@ -17,11 +20,17 @@ I have been working with Dr. Laura Rozek, professor of Epidemiology, and Dr. Sar
 
 During my internship at John Wiley & Sons, Inc., [I analyzed impact factor and submission data](https://onlinelibrary.wiley.com/doi/abs/10.1002/leap.1285).
 
+[Experience Details](experience.html) 
+
+<br>
+
 ## About
 
 I received a BS in statistics from the University of Michigan in 2020.  I am currently a student at Columbia University Mailman School of Public Health pursuing a MS in Biostatistics.
 
 In 2016 I founded the Girl Scouts at the University of Michigan Club.  I served as President from 2016-2020 working closely with the Girl Scouts Heart of Michigan council.  I am a Girl Scout Gold Award Recipient for a project I implemented about Noise Induced Hearing Loss Prevention.
+
+<br>
 
 ## Contact Information
 
